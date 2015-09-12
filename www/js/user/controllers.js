@@ -49,7 +49,6 @@ angular.module('user.controllers', [])
     .controller('SignUpController', [
         '$state', '$scope', 'UserService',   // <-- controller dependencies
         function ($state, $scope, UserService) {
-
             $scope.creds = {};
 
             /**
@@ -58,7 +57,11 @@ angular.module('user.controllers', [])
             $scope.signUpUser = function () {
 
                 UserService.init();
-
+		var patt = new RegExp("[A-Za-z][A-Za-z0-9]*@fsu\.edu");
+		if (!patt.test($scope.creds.email)) {
+		    alert("Error Creating User Account; invalid username " + $scope.creds.email);
+		    return;
+		}
                 UserService.createUser($scope.creds).then(function (_data) {
                     $scope.user = _data;
 
