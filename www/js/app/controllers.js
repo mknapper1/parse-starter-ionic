@@ -15,7 +15,7 @@ angular.module('app.controllers', [])
         '$state', '$scope', 'UserService',   // <-- controller dependencies
         function ($state, $scope, UserService) {
 
-            $scope.dataList = ["One", "Two", "Three", "Four"];
+            $scope.dataList = ["Spirit Way", "Woodward", "Traditions", "Call"];
 
             $scope.doLogoutAction = function () {
                 UserService.logout().then(function () {
