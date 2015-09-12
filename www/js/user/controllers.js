@@ -53,7 +53,7 @@ angular.module('user.controllers', [])
             $scope.creds = {};
 
             /**
-             *
+             * 
              */
             $scope.signUpUser = function () {
 
