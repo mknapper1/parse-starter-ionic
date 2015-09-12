@@ -25,12 +25,12 @@ angular.module('user.services', [])
                     var currentUser = Parse.User.current();
                     if (currentUser) {
                         return $q.when(currentUser);
-                    } else {
+                    } else {_userParams
                         return $q.reject({error: "noUser"});
                     }
 
                 },
-                /**
+                /**SignUpController
                  *
                  * @param _userParams
                  */

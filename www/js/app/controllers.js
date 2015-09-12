@@ -15,9 +15,7 @@ angular.module('app.controllers', [])
         '$state', '$scope', 'UserService',   // <-- controller dependencies
         function ($state, $scope, UserService) {
 
-            $scope.dataList = ["One", "Two", "Three","Four"];
-
-
+            $scope.dataList = ["One", "Two", "Three", "Four"];
 
             $scope.doLogoutAction = function () {
                 UserService.logout().then(function () {
@@ -30,6 +28,10 @@ angular.module('app.controllers', [])
                 })
             };
 
+            $scope.gotoRequest = function () {
+                alert("request ride");
+                $state.go('request-ride')
+            }
 
         }])
     .controller('AccountCtrl', [
@@ -40,6 +42,24 @@ angular.module('app.controllers', [])
             UserService.currentUser().then(function (_user) {
                 $scope.user = _user;
             });
+
+
+        }])
+    .controller('RideRequestCtrl', [
+        '$state', '$scope', 'UserService',   // <-- controller dependencies
+        function ($state, $scope, UserService) {
+
+            // ng-model holding the values for any spot
+            $scope.spot = {
+                latitude: "0",
+                longitude: "0",
+                spot: "Default Spot",
+                username: $scope.creds.username
+            }
+
+            $scope.requestRide = function () {
+                alert("Fuck you");
+            };
 
 
         }]);
