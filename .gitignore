@@ -6,5 +6,8 @@ node_modules/
 platforms/
 plugins/
 
-# I'm so sorry
-www/js/app.js
+# Keys for Parse
+www/js/keys.js
+
+# Intellij
+.idea/
