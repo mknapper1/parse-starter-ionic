@@ -29,11 +29,6 @@
       "platform": "android",
       "version": "",
       "locator": "android"
-    },
-    {
-      "platform": "ios",
-      "version": "",
-      "locator": "ios"
     }
   ]
 }
