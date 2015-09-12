@@ -1,0 +1,22 @@
+<ion-view title="RideRequest">
+    <ion-content padding="true" scroll="false" class="has-header">
+        <form>
+            <ion-list>
+                <label class="item item-input">
+                    <span class="input-label">Latitude</span>
+                    <input type="text" placeholder="Latitude"  ng-model="spot.latitude">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Longitude</span>
+                    <input type="text" placeholder="Longitude" ng-model="spot.longitude">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Parking Lot</span>
+                    <input type="text" placeholder="Spot" ng-model="spot.spot">
+                </label>
+            </ion-list>
+            <button class="button button-stable button-block"
+                    href="/request-ride">Request Ride</button>
+        </form>
+    </ion-content>
+</ion-view>
