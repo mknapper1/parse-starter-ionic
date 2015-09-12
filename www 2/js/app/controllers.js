@@ -15,8 +15,7 @@ angular.module('app.controllers', [])
         '$state', '$scope', 'UserService',   // <-- controller dependencies
         function ($state, $scope, UserService) {
 
-            $scope.dataList = ["One", "Two", "Three","Four"];
-
+            $scope.dataList = ["One", "Two", "Three"];
 
 
             $scope.doLogoutAction = function () {
@@ -26,7 +25,7 @@ angular.module('app.controllers', [])
                     $state.go('app-login');
 
                 }, function (_error) {
-                    alert("error logging in" + _error.debug);
+                    alert("error logging in " + _error.debug);
                 })
             };
 
